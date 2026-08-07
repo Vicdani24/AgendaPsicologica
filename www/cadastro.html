@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cadastro</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="topo">
+
+<img src="img/logo.png" class="logo">
+
+<p>Cadastro do usuário</p>
+
+</header>
+
+<main>
+
+<div class="card">
+
+<label>Nome</label>
+
+<input
+type="text"
+id="nome"
+placeholder="Digite seu nome">
+
+<label>Idade</label>
+
+<input
+type="number"
+id="idade"
+placeholder="Ex.: 30">
+
+<label>Data de nascimento</label>
+
+<input
+type="date"
+id="nascimento">
+
+<label>Sexo</label>
+
+<select id="sexo">
+
+<option value="">Selecione</option>
+
+<option>Feminino</option>
+
+<option>Masculino</option>
+
+<option>Prefiro não informar</option>
+
+</select>
+
+<label>Objetivo</label>
+
+<textarea
+id="objetivo"
+placeholder="Ex.: controlar ansiedade, organizar emoções..."></textarea>
+
+<button onclick="salvarCadastro()">
+
+Salvar Cadastro
+
+</button>
+
+</div>
+
+</main>
+
+<script src="js/cadastro.js"></script>
+
+</body>
+
+</html>

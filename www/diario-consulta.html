@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Diário de Consulta</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="topo">
+
+<img src="img/logo.png" class="logo">
+
+<h2>📝 Diário de Consulta</h2>
+
+</header>
+
+<main>
+
+<div class="card">
+
+<label>Data da consulta</label>
+
+<input type="date" id="dataConsulta">
+
+<label>Psicólogo(a)</label>
+
+<input type="text" id="psicologo" placeholder="Nome do profissional">
+
+<label>Tema principal</label>
+
+<input type="text" id="tema" placeholder="Ex.: Ansiedade">
+
+<label>Como eu estava antes da sessão?</label>
+
+<textarea id="antes"></textarea>
+
+<label>O que conversamos?</label>
+
+<textarea id="durante"></textarea>
+
+<label>Exercícios ou orientações</label>
+
+<textarea id="tarefas"></textarea>
+
+<label>Como saí da consulta?</label>
+
+<textarea id="depois"></textarea>
+
+<button onclick="salvarConsultaDiario()">
+
+Salvar Anotação
+
+</button>
+
+</div>
+
+<div id="historicoConsultas"></div>
+
+</main>
+
+<script src="js/diario-consulta.js"></script>
+
+</body>
+
+</html>

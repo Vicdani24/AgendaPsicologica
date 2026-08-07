@@ -1,0 +1,691 @@
+/* ===========================
+   AGENDA PSICOLÓGICA
+   style.css
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:#F7F9FC;
+
+    color:#263238;
+
+    min-height:100vh;
+
+}
+
+
+/* ===========================
+   TOPO
+=========================== */
+
+.topo{
+
+    background:linear-gradient(135deg,#1565C0,#2E7D32);
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px 20px 30px;
+
+    border-bottom-left-radius:35px;
+
+    border-bottom-right-radius:35px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.20);
+
+}
+
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+    width:190px !important;
+    height:190px !important;
+    object-fit:contain;
+    display:block;
+    margin:0 auto;
+}
+
+/* ===========================
+   FRASE
+=========================== */
+
+.frase{
+
+    font-size:17px;
+
+    opacity:.95;
+
+    margin-bottom:18px;
+
+    line-height:1.5;
+
+}
+
+
+/* ===========================
+   SAUDAÇÃO
+=========================== */
+
+#saudacao{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+
+}
+
+
+/* ===========================
+   DATA
+=========================== */
+
+#dataHoje{
+
+    font-size:15px;
+
+    opacity:.95;
+
+}
+
+
+/* ===========================
+   DASHBOARD
+=========================== */
+
+.dashboard{
+
+    padding:20px;
+
+}
+
+
+/* ===========================
+   CARDS
+=========================== */
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+
+    border-left:6px solid #1565C0;
+
+}
+
+
+.card h3{
+
+    color:#1565C0;
+
+    margin-bottom:10px;
+
+}
+
+
+.card p{
+
+    font-size:16px;
+
+    color:#444;
+
+}
+
+
+/* ===========================
+   CARDS PEQUENOS
+=========================== */
+
+.pequeno{
+
+    border-left:6px solid #2E7D32;
+
+}
+
+
+/* ===========================
+   RODAPÉ
+=========================== */
+
+footer{
+
+    text-align:center;
+
+    color:#777;
+
+    padding:30px 20px;
+
+    font-size:14px;
+
+}
+
+/* =====================================
+   AGENDA PSICOLÓGICA
+   PARTE 3D.2
+   MENU EM CARTÕES
+===================================== */
+
+
+
+body{
+
+    margin:0;
+
+    font-family: Arial, sans-serif;
+
+    background:#f5f8fb;
+
+    color:#2c3e50;
+
+}
+
+
+
+
+.topo{
+
+    text-align:center;
+
+    padding:25px 15px;
+
+    background:linear-gradient(
+        135deg,
+        #1976d2,
+        #43a047
+    );
+
+    color:white;
+
+    border-radius:0 0 30px 30px;
+
+}
+
+
+
+.logo{
+
+    width:130px;
+
+    height:130px;
+
+    object-fit:contain;
+
+}
+
+
+
+
+.frase{
+
+    background:white;
+
+    color:#555;
+
+    margin:20px auto;
+
+    padding:15px;
+
+    border-radius:20px;
+
+    max-width:350px;
+
+}
+
+
+
+
+
+/* MENU PRINCIPAL */
+
+
+.menu-principal{
+
+    padding:20px;
+
+}
+
+
+
+
+.grid-menu{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+
+}
+
+
+
+
+.grid-menu a{
+
+
+    background:white;
+
+    text-decoration:none;
+
+    color:#2c3e50;
+
+    height:120px;
+
+
+    border-radius:25px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    font-size:35px;
+
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,0.08);
+
+
+    transition:0.2s;
+
+
+}
+
+
+
+
+.grid-menu a span{
+
+
+    font-size:15px;
+
+    margin-top:10px;
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+
+.grid-menu a:active{
+
+
+    transform:scale(0.95);
+
+
+}
+
+
+
+
+
+/* CARDS DO PAINEL */
+
+
+.cards-resumo{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+
+
+}
+
+
+
+
+.card{
+
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:15px;
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+
+
+.card h3{
+
+
+    font-size:25px;
+
+    margin:5px;
+
+
+}
+
+
+
+
+
+/* HUMOR */
+
+
+.botoes-humor{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+
+}
+
+
+
+
+.botoes-humor button{
+
+
+    border:none;
+
+    background:white;
+
+    font-size:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+
+    box-shadow:
+
+    0 4px 10px rgba(0,0,0,0.15);
+
+
+}
+
+
+
+
+/* AVISOS */
+
+
+.card-aviso,
+.card-progresso,
+.card-perfil,
+.mini-card{
+
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:18px;
+
+    margin:10px;
+
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+
+
+
+footer{
+
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#777;
+
+
+}
+
+/* =====================================
+   CADASTRO
+===================================== */
+
+.card{
+
+    background:#ffffff;
+
+    margin:20px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+.card label{
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:5px;
+
+    font-weight:bold;
+
+    color:#2c3e50;
+
+}
+
+.card input,
+.card select,
+.card textarea{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    padding:12px;
+
+    border:1px solid #d9e2ec;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    background:#f8fafc;
+
+    outline:none;
+
+}
+
+.card input:focus,
+.card select:focus,
+.card textarea:focus{
+
+    border-color:#1976d2;
+
+}
+
+.card textarea{
+
+    min-height:120px;
+
+    resize:vertical;
+
+}
+
+.card button{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:linear-gradient(135deg,#1976d2,#43a047);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+}
+
+.card button:active{
+
+    transform:scale(0.98);
+
+}
+
+/* PERFIL */
+
+.perfil-card{
+
+background:#fff;
+
+margin:20px;
+
+padding:25px;
+
+border-radius:25px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+text-align:center;
+
+}
+
+.foto-perfil{
+
+width:110px;
+
+height:110px;
+
+margin:auto;
+
+border-radius:50%;
+
+background:#1976d2;
+
+color:white;
+
+font-size:60px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.perfil-card h2{
+
+margin-top:15px;
+
+}
+
+.perfil-card p{
+
+text-align:left;
+
+margin-top:15px;
+
+}
+
+.caixa-texto{
+
+background:#f5f5f5;
+
+padding:15px;
+
+border-radius:15px;
+
+text-align:left;
+
+min-height:80px;
+
+}
+
+.perfil-card button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:15px;
+
+background:#1976d2;
+
+color:white;
+
+font-size:17px;
+
+}
+
+#historicoConsultas{
+
+margin:20px;
+
+}
+
+#historicoConsultas .card{
+
+margin-top:15px;
+
+}

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agenda Psicológica</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="topo">
+
+<img src="img/logo.png" class="logo">
+
+
+<h2 id="saudacao">
+Olá 🌱
+</h2>
+
+<center><p id="dataAtual"></p></center>
+
+
+<br>
+
+<section class="frase-final">
+
+
+<h2>
+🌱 "Pequenas mudanças são grandes conquistas."
+</h2>
+
+</section>
+
+</header>
+
+
+
+<main>
+
+<br>
+
+<section class="humor">
+
+
+<h2>
+Como você está hoje?
+</h2>
+
+<br>
+
+<div class="botoes-humor">
+
+
+<button onclick="registrarHumor('😀 Muito bem')">
+😀
+</button>
+
+
+<button onclick="registrarHumor('🙂 Bem')">
+🙂
+</button>
+
+
+<button onclick="registrarHumor('😐 Neutro')">
+😐
+</button>
+
+
+<button onclick="registrarHumor('😔 Triste')">
+😔
+</button>
+
+
+<button onclick="registrarHumor('😢 Muito triste')">
+😢
+</button>
+
+
+</div>
+
+<br>
+
+<center>
+<div id="ultimoHumor">
+
+Nenhum registro ainda.
+
+</div>
+</center>
+
+</section>
+
+
+
+
+
+<section class="menu-principal">
+
+
+<h2>
+Menu
+</h2>
+
+
+
+<div class="grid-menu">
+
+<a href="cadastro.html">
+
+👤
+
+<span>
+Cadastro
+</span>
+
+</a>
+
+<a href="perfil.html">
+
+🪪
+
+<span>
+Perfil
+</span>
+
+</a>
+
+<a href="diario-consulta.html">
+
+📖
+
+<span>
+Diário Emocional
+</span>
+
+</a>
+
+
+
+<a href="#consultas">
+
+📅
+
+<span>
+Consultas
+</span>
+
+</a>
+
+
+<a href="conquistas.html">
+
+🏆
+
+<span>
+Metas em Processo
+</span>
+
+</a>
+
+
+
+
+<a href="avisos.html">
+
+🔔
+
+<span>
+Metas
+</span>
+
+</a>
+
+
+
+
+<a href="tarefas.html">
+
+✅
+
+<span>
+Tarefas
+</span>
+
+</a>
+
+
+
+
+<a href="financeiro.html">
+
+💰
+
+<span>
+Gastos
+</span>
+
+</a>
+
+
+
+
+<a href="relatorios.html">
+
+📊
+
+<span>
+Gráfico Emocional
+</span>
+
+</a>
+
+
+
+
+<a href="configuracoes.html">
+
+⚙️
+
+<span>
+Configurações
+</span>
+
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+<section class="painel">
+
+
+<h2>
+Meu acompanhamento
+</h2>
+
+<br>
+
+<div class="cards-resumo">
+
+
+<div class="card">
+
+<h3 id="totalHumor">
+0
+</h3>
+
+<p>
+🧠 Humores
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3 id="totalDiario">
+0
+</h3>
+
+<p>
+📖 Diários
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3 id="totalConsultas">
+0
+</h3>
+
+<p>
+📅 Consultas
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+<section class="progresso-resumo">
+
+
+<h2>
+❤️ Minha Evolução
+</h2>
+
+
+
+<div class="card-progresso">
+
+
+<p>
+Continue registrando seus sentimentos
+para acompanhar sua evolução emocional.
+</p>
+
+
+
+<div class="barra">
+
+<div class="progresso">
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="perfil">
+
+
+<h2>
+👤 Meu Perfil
+</h2>
+
+
+
+<div class="card-perfil">
+
+
+<p>
+Nome:
+<span id="nomeUsuario">
+Usuário
+</span>
+</p>
+
+
+
+<p>
+Dias usando o aplicativo:
+<span id="diasUso">
+0
+</span>
+</p>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+<footer>
+
+
+<p>
+🧠 Agenda Psicológica
+</p>
+
+
+<p>
+Cuidando da mente todos os dias 🌱
+</p>
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
