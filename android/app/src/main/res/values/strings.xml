@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AgendaPsicológica</string>
+    <string name="title_activity_main">AgendaPsicológica</string>
+    <string name="package_name">com.agendapsicologica.app</string>
+    <string name="custom_url_scheme">com.agendapsicologica.app</string>
+</resources>
