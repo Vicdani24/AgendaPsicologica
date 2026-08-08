@@ -188,7 +188,7 @@ async function agendarNotificacaoConsulta() {
                     },
 
                     smallIcon:
-                        "ic_launcher_foreground",
+                        "ic_launcher",
 
                     sound:
                         "default"
