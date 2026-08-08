@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Consultas</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="topo">
+
+<img src="img/logo.png" class="logo">
+
+<h2>Consultas</h2>
+
+</header>
+
+<a href="index.html" class="btn-voltar">
+⬅ Início
+</a>
+
+<main>
+
+<div class="card">
+
+<h2>📅 Próxima Consulta</h2>
+
+<div id="proximaConsulta"></div>
+
+</div>
+
+<div class="card">
+
+<h2>📋 Próximas Consultas</h2>
+
+<div id="listaConsultas"></div>
+
+</div>
+
+<div class="card">
+
+<h2>✅ Histórico</h2>
+
+<div id="historicoConsultas">
+
+<p>Nenhuma consulta realizada.</p>
+
+</div>
+
+</div>
+
+<button
+class="botao-principal"
+onclick="marcarRealizada()">
+
+✔ Marcar consulta como realizada
+
+</button>
+
+<a
+    href="configuracoes-agenda.html"
+    class="botao-principal"
+    style="text-decoration:none; text-align:center; box-sizing:border-box;"
+>
+    ⚙️ Configurar agenda
+</a>
+
+<button
+    type="button"
+    class="botao-principal"
+    onclick="testarNotificacao()"
+>
+    🔔 Testar notificação
+</button>
+
+</main>
+
+<script src="js/notificacoes.js"></script>
+
+<script src="js/consultas.js"></script>
+
+</body>
+
+</html>

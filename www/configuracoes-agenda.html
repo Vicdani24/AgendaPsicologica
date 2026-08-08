@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Configuração da Agenda</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header class="topo">
+
+        <img
+            src="img/logo.png"
+            class="logo"
+            alt="Agenda Psicológica"
+        >
+
+        <h2>Configuração da Agenda</h2>
+
+    </header>
+
+
+    <!-- BOTÃO INÍCIO -->
+
+    <a
+        href="index.html"
+        class="btn-voltar"
+    >
+        ⬅ Início
+    </a>
+
+
+    <main>
+
+        <!-- DIA DA CONSULTA -->
+
+        <section class="card">
+
+            <h2>📅 Dia da consulta</h2>
+
+            <p>
+                Escolha o dia da semana em que normalmente
+                acontecem suas consultas.
+            </p>
+
+            <select
+                id="diaSemana"
+                class="campo-select"
+            >
+
+                <option value="0">
+                    Domingo
+                </option>
+
+                <option value="1" selected>
+                    Segunda-feira
+                </option>
+
+                <option value="2">
+                    Terça-feira
+                </option>
+
+                <option value="3">
+                    Quarta-feira
+                </option>
+
+                <option value="4">
+                    Quinta-feira
+                </option>
+
+                <option value="5">
+                    Sexta-feira
+                </option>
+
+                <option value="6">
+                    Sábado
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- HORÁRIO -->
+
+        <section class="card">
+
+            <h2>🕓 Horário da consulta</h2>
+
+            <p>
+                Informe o horário habitual da consulta.
+            </p>
+
+            <input
+                type="time"
+                id="horarioConsulta"
+                value="16:00"
+                class="campo-input"
+            >
+
+        </section>
+
+
+        <!-- FREQUÊNCIA -->
+
+        <section class="card">
+
+            <h2>🔄 Frequência</h2>
+
+            <p>
+                Com que frequência sua consulta acontece?
+            </p>
+
+            <select
+                id="frequencia"
+                class="campo-select"
+            >
+
+                <option
+                    value="semanal"
+                    selected
+                >
+                    Toda semana
+                </option>
+
+                <option value="quinzenal">
+                    A cada 2 semanas
+                </option>
+
+                <option value="mensal">
+                    Uma vez por mês
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- LEMBRETE -->
+
+        <section class="card">
+
+            <h2>🔔 Lembrete</h2>
+
+            <p>
+                Quanto tempo antes você deseja receber
+                o aviso da consulta?
+            </p>
+
+            <select
+                id="lembrete"
+                class="campo-select"
+            >
+
+                <option value="15">
+                    15 minutos antes
+                </option>
+
+                <option value="30">
+                    30 minutos antes
+                </option>
+
+                <option
+                    value="60"
+                    selected
+                >
+                    1 hora antes
+                </option>
+
+                <option value="120">
+                    2 horas antes
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- BOTÃO SALVAR -->
+
+        <button
+            type="button"
+            class="botao-principal"
+            onclick="salvarConfiguracoesAgenda()"
+        >
+
+            💾 Salvar configurações
+
+        </button>
+
+
+        <!-- MENSAGEM -->
+
+        <div
+            id="mensagemConfiguracao"
+            class="mensagem-configuracao"
+        ></div>
+
+    </main>
+
+
+    <script src="js/configuracoes-agenda.js"></script>
+
+</body>
+
+</html>

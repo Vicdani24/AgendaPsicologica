@@ -1,3 +1,17 @@
+function preencherDataConsulta(){
+
+    const dataSalva =
+    localStorage.getItem("consultaRealizada");
+
+    if(!dataSalva) return;
+
+    const data = new Date(dataSalva);
+
+    document.getElementById("dataConsulta").value =
+    data.toISOString().split("T")[0];
+
+}
+
 let consultas =
 JSON.parse(localStorage.getItem("diarioConsulta")) || [];
 
@@ -61,4 +75,10 @@ div.innerHTML+=`
 
 }
 
-mostrarConsultas();
+document.addEventListener("DOMContentLoaded",()=>{
+
+    preencherDataConsulta();
+
+    mostrarConsultas();
+
+});

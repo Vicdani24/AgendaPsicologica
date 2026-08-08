@@ -56,6 +56,21 @@ body{
     margin:0 auto;
 }
 
+/*========
+voltar
+========*/
+
+.btn-voltar{
+    display:inline-block;
+    margin:15px;
+    padding:10px 18px;
+    background:#1976d2;
+    color:#fff;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:bold;
+}
+
 /* ===========================
    FRASE
 =========================== */
@@ -687,5 +702,37 @@ margin:20px;
 #historicoConsultas .card{
 
 margin-top:15px;
+
+}
+
+/*==consultas==*/
+
+.botao-principal{
+
+width:90%;
+
+display:block;
+
+margin:20px auto;
+
+padding:15px;
+
+border:none;
+
+border-radius:18px;
+
+background:#1976d2;
+
+color:#fff;
+
+font-size:17px;
+
+font-weight:bold;
+
+}
+
+.botao-principal:active{
+
+transform:scale(.98);
 
 }
