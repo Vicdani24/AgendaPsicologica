@@ -2,7 +2,7 @@ const { LocalNotifications } = Capacitor.Plugins;
 
 
 // ==========================================
-// PEDIR PERMISSÃO PARA NOTIFICAÇÕES
+// PEDIR PERMISSÃO
 // ==========================================
 
 async function pedirPermissaoNotificacoes() {
@@ -32,7 +32,7 @@ async function pedirPermissaoNotificacoes() {
     } catch (erro) {
 
         console.error(
-            "Erro ao solicitar permissão:",
+            "Erro nas permissões:",
             erro
         );
 
@@ -42,39 +42,177 @@ async function pedirPermissaoNotificacoes() {
 
 
 // ==========================================
-// TESTE DE NOTIFICAÇÃO
+// CANCELAR NOTIFICAÇÃO ANTERIOR
 // ==========================================
 
-async function testarNotificacao() {
+async function cancelarNotificacaoConsulta() {
 
-    const permitido =
-        await pedirPermissaoNotificacoes();
+    try {
 
-    if (!permitido) {
+        await LocalNotifications.cancel({
+            notifications: [
+                {
+                    id: 2001
+                }
+            ]
+        });
 
-        alert(
-            "A permissão para notificações não foi concedida."
+    } catch (erro) {
+
+        console.log(
+            "Nenhuma notificação anterior para cancelar."
         );
 
-        return;
     }
 
+}
 
-    await LocalNotifications.schedule({
 
-        notifications: [
+// ==========================================
+// AGENDAR NOTIFICAÇÃO DA CONSULTA
+// ==========================================
 
-            {
-                title: "📅 Agenda Psicológica",
+async function agendarNotificacaoConsulta() {
 
-                body: "As notificações estão funcionando! ✅",
+    try {
 
-                id: 1001
+        const permitido =
+            await pedirPermissaoNotificacoes();
 
-            }
+        if (!permitido) {
 
-        ]
+            console.log(
+                "Notificações não autorizadas."
+            );
 
-    });
+            return;
+
+        }
+
+
+        const banco =
+            JSON.parse(
+                localStorage.getItem(
+                    "bancoConsultas"
+                )
+            );
+
+
+        if (
+            !banco ||
+            !banco.proximaConsulta
+        ) {
+
+            console.log(
+                "Nenhuma próxima consulta encontrada."
+            );
+
+            return;
+
+        }
+
+
+        const consulta =
+            new Date(
+                banco.proximaConsulta
+            );
+
+
+        // ======================================
+        // CALCULAR HORÁRIO DO AVISO
+        // ======================================
+
+        const minutosAntes =
+            Number(
+                banco.lembrete || 60
+            );
+
+
+        const horarioNotificacao =
+            new Date(
+                consulta.getTime()
+                -
+                minutosAntes * 60 * 1000
+            );
+
+
+        // Não agenda notificações que já passaram
+
+        if (
+            horarioNotificacao <= new Date()
+        ) {
+
+            console.log(
+                "Horário da notificação já passou."
+            );
+
+            return;
+
+        }
+
+
+        // ======================================
+        // CANCELAR ANTERIOR
+        // ======================================
+
+        await cancelarNotificacaoConsulta();
+
+
+        // ======================================
+        // AGENDAR NOVA
+        // ======================================
+
+        await LocalNotifications.schedule({
+
+            notifications: [
+
+                {
+
+                    id: 2001,
+
+                    title:
+                        "📅 Próxima Consulta",
+
+                    body:
+                        `Sua consulta será às ${String(
+                            consulta.getHours()
+                        ).padStart(2, "0")}:${String(
+                            consulta.getMinutes()
+                        ).padStart(2, "0")}.`,
+
+                    schedule: {
+
+                        at:
+                            horarioNotificacao
+
+                    },
+
+                    smallIcon:
+                        "ic_launcher_foreground",
+
+                    sound:
+                        "default"
+
+                }
+
+            ]
+
+        });
+
+
+        console.log(
+            "Notificação agendada para:",
+            horarioNotificacao
+        );
+
+
+    } catch (erro) {
+
+        console.error(
+            "Erro ao agendar notificação:",
+            erro
+        );
+
+    }
 
 }

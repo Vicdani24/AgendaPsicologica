@@ -542,8 +542,9 @@ function carregarConsultas() {
 
     mostrarHistorico();
 
-}
+    agendarNotificacaoConsulta();
 
+}
 
 // ==========================================
 // MARCAR CONSULTA COMO REALIZADA
